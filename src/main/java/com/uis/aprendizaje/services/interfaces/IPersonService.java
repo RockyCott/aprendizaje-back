@@ -1,5 +1,7 @@
 package com.uis.aprendizaje.services.interfaces;
 
+import com.uis.aprendizaje.dto.PersonDTO;
+import com.uis.aprendizaje.model.Person;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -7,8 +9,14 @@ import java.util.List;
 @Service
 public interface IPersonService {
 
-    String addPerson(String nombre, String direccion);
+    Person addPerson(PersonDTO aPersonDTO);
 
-    List<String> getPersons();
+    Boolean deletePerson(Long id);
+
+    Person getPerson(Long id);
+
+
+
+    List<Person> getAllPersons();
 
 }
